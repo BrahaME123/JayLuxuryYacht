@@ -15,7 +15,7 @@
     showSlide(index);
   }
 
-  setInterval(nextSlide, 4000);
+  setInterval(nextSlide, 6000);
 
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => showSlide(i));
