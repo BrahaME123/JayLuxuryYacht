@@ -27,7 +27,6 @@ a {
   display: flex;
   justify-content: center;
   z-index: 1000;
-  background: transparent; 
 }
 
 .nav-container {
@@ -44,24 +43,21 @@ a {
   color: #fff;
 }
 
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .nav-links a {
-  margin-left: 25px;
-  font-size: 0.80rem;
-}
-.nav-links a:hover,
-.nav-links a.active {
-  color: #95C7FC;
-}
-.btn-nav {
-  background: #00A0FD;
   color: #fff;
-  padding: 8px 18px;
-  border-radius: 20px;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  font-size: 0.80rem;
+  
 }
-.btn-nav:hover {
-  background: #0078F3;
-}
+
+
 
 /* Services (similar to catalogue) */
 .catalogue {
@@ -183,11 +179,58 @@ a {
   gap: 25px;
   align-items: center;
 }
+
 @media (max-width: 768px) {
-  .catalogue h1 {
-    font-size: 1.6rem;
+  .nav-container {
+    flex-wrap: wrap;      
+    gap: 10px;
   }
-  .catalogue-subtitle {
+  .nav-container .btn-nav{
+    display: none;
+    
+  }
+  .nav-container .brand{
+    margin: 0 auto;        
+    text-align: center;
+  }
+  .nav-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex: 1 1 100%;        
+    justify-content: center;
+    flex-wrap: wrap;       
+    gap: 12px;
+  }
+
+  .nav-links a {
     font-size: 0.85rem;
+    padding: 6px 10px;
+    margin: 0 auto;
+
   }
+
+  .site-header {
+    padding: 12px 20px;
+    position: fixed;     
+    background: rgba(0,0,0,0.85);
+  }
+
+  .hero {
+  min-height: calc(100vh - 80px); /* ocupa toda la pantalla menos el header */
+  margin-top: 80px; /* si lo quieres separado */
+}
+
+.about-us{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.about-images{
+  display: none;
+}
+
 }

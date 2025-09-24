@@ -80,46 +80,6 @@ a {
   background: #0078F3;
 }
 
-/* Menu toggle (hamburguesa) */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  display: block;
-  height: 3px;
-  background: #fff;
-  border-radius: 2px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-a  .nav-links {
-        position: static;
-    top: 70px;
-    right: 0;
-    background: rgba(0,0,0,0.95);
-    flex-direction: column;
-    width: 200px;
-    padding: 20px;
-    display: none;
-    gap: 15px;
-    border-radius: 0 0 0 10px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-}
 
 
 /* Hero */
@@ -500,110 +460,52 @@ a  .nav-links {
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 1100px) {
-  .about-us {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 60px 20px;
-  }
-  .about-images .img-main img {
-    height: 220px;
-  }
-  .img-small img {
-    height: 100px;
-  }
-}
-
-@media (max-width: 900px) {
-  .hero h1 {
-    font-size: 2.2rem;
-    letter-spacing: 5px;
-  }
-  .about-content h2 {
-    font-size: 1.7rem;
-    letter-spacing: 3px;
-  }
-  .experiences-slider h2 {
-    font-size: 1.1rem;
-    letter-spacing: 6px;
-  }
-  .final-cta h2 {
-    font-size: 1.1rem;
-  }
-}
-
 @media (max-width: 768px) {
-  .site-header {
-    padding: 15px 15px;
-  }
   .nav-container {
-    padding: 0;
+    flex-wrap: wrap;       /* Permite que logo + links salten a otra fila */
+    gap: 10px;
   }
-  .about-us {
-    padding: 40px 10px;
-    gap: 20px;
+  .nav-container .btn-nav{
+    display: none;
+    
   }
-  .about-content h2,
-  .about-list h3 {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
+  .nav-container .brand{
+    margin: 0 auto;        /* El logo ocupa toda la fila */
+    text-align: center;
   }
-  .about-images .img-main img {
-    height: 150px;
+
+  .nav-links {
+    flex: 1 1 100%;        /* Los links ocupan todo el ancho */
+    justify-content: center;
+    flex-wrap: wrap;       /* Saltan a otra línea si no caben */
+    gap: 12px;
   }
-  .img-small img {
-    height: 70px;
+
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    margin: 0 auto;
+
   }
-  .experiences-slider {
-    padding: 3rem 1rem;
+
+  .site-header {
+    padding: 12px 20px;
+    position: fixed;     
+    background: rgba(0,0,0,0.85);
   }
-  .slider {
-    padding: 0;
-  }
-  .slide {
-    padding: 1.5rem;
-  }
-  .final-cta {
-    padding: 60px 10px;
-  }
-  .cta-content {
-    max-width: 95vw;
-  }
-  .luxury-footer {
-    padding: 30px 10px;
-    font-size: 0.75rem;
-  }
+
+  .hero {
+  min-height: calc(100vh - 80px); /* ocupa toda la pantalla menos el header */
+  margin-top: 80px; /* si lo quieres separado */
 }
 
-@media (max-width: 500px) {
-  .hero h1 {
-    font-size: 1.3rem;
-    letter-spacing: 2px;
-  }
-  .about-content h2 {
-    font-size: 1rem;
-    letter-spacing: 1px;
-  }
-  .about-content p,
-  .about-list li,
-  .final-cta p,
-  .slide p {
-    font-size: 0.70rem;
-  }
-  .about-images .img-main img {
-    height: 90px;
-  }
-  .img-small img {
-    height: 40px;
-  }
-  .slide {
-    padding: 0.7rem;
-  }
-  .final-cta {
-    padding: 30px 5px;
-  }
-  .footer-logo img {
-    height: 20px;
-  }
+.about-us{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.about-images{
+  display: none;
+}
+
 }
