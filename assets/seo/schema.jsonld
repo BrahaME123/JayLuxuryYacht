@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Jay Luxury Yachts - Catamaran Private Charter",
+  "description": "Charters privados de catamaran en Cancún e Isla Mujeres. Tiburón Ballena, Tours, Private Transportatión.",
+  "url": "https://www.jayluxuryyachts.com/",
+  "telephone": "+529843149676",
+  "areaServed": {
+    "@type": "City",
+    "name": "Cancún"
+  }
+}
